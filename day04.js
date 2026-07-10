@@ -32,11 +32,18 @@
 
 // module.exports = {calculateTotal,applyDiscount}
 
-let fare = 50;
-let kmRate = 30;
+const  Base_fare = 50;
+const  Rate_per_km = 30;
 const calculateRickshawFare = (km) => {
-   const final = fare+(km*kmRate)
-    return final;
+
+    if(typeof km !== "number" || !Number.isFinite(km)) {
+        throw new Error ("Distance must be vaild number")
+    }
+    if(km < 0) {
+        throw new Error ("Distance must be Positive ")
+    }
+   
+    return Base_fare+(km*Rate_per_km)
 }
 
 
