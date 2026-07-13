@@ -50,25 +50,29 @@
 // console.log(finalBalance)
 
 
-const transactions = [5000, -2000, 3000, -1500, 8000, -500];
+// const transactions = [5000, -2000, 3000, -1500, 8000, -500];
 
-const getDeposits = (transactions) => {
-    const dep = transactions.filter(amount => amount>0)
-    return dep;
-}
+// const getDeposits = (transactions) => {
+//     const dep = transactions.filter(amount => amount>0)
+//     return dep;
+// }
 
-const getWithdrawals = (transactions) =>{
-    const dep1 = transactions.filter(amount => amount<0)
-    return dep1;
-}
+// const getWithdrawals = (transactions) =>{
+//     const dep1 = transactions.filter(amount => amount<0)
+//     return dep1;
+// }
 
-const getBalance = (transactions) =>{
-    const finalBalance = transactions.reduce((sum,amount)=> sum+amount,0)
-    return finalBalance
-}
+// const getBalance = (transactions) =>{
+//     const finalBalance = transactions.reduce((sum,amount)=> sum+amount,0)
+//     return finalBalance
+// }
 
-console.log(getDeposits(transactions))
-console.log(getWithdrawals(transactions))
-console.log(getBalance(transactions))
+// console.log(getDeposits(transactions))
+// console.log(getWithdrawals(transactions))
+// console.log(getBalance(transactions))
 
-module.exports = {getDeposits,getWithdrawals,getBalance}
+// module.exports = {getDeposits,getWithdrawals,getBalance}
+
+const nums = [1, 2, 3, 4, 5];
+const result = nums.filter(n => n % 2 === 0);
+console.log(result);
