@@ -123,3 +123,32 @@ const user = {
 };
 
 console.log(user.address?.city);
+
+const user1 = {
+  name:"Ahmad",
+  address:{
+    city : "Lahore "
+  }
+}
+
+const user2 = {
+  name: "Ali"
+  
+};
+
+console.log(user1?.address?.city)
+console.log(user2?.address?.city)
+
+// In Array
+
+const users = [user1, user2];
+users.forEach(user => {
+  console.log(user?.address?.city ?? "City not provided");
+});
+
+// Test ke liye functions
+const getCity = (user) => user?.address?.city ?? "City not provided";
+
+const mergeProfiles = (basic, job) => ({ ...basic, ...job });
+
+module.exports = { getCity, mergeProfiles };
